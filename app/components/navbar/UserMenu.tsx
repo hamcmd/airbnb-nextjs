@@ -7,18 +7,20 @@ import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
 
 const UserMenu = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleOpen = useCallback(() => {
-        setIsOpen((prev) => !prev);
-    }
-    , []);
+  const [ isOpen, setIsOpen ] = useState( false );
+  const toggleOpen = useCallback( () => {
+    setIsOpen( ( prev ) => ! prev );
+  }
+  , [] );
 
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         <div 
-            onClick={() => {}}
-            className="
+          onClick={() => {
+            return null;
+          }}
+          className="
                         hidden
                         md:block
                         text-sm
@@ -71,22 +73,26 @@ const UserMenu = () => {
             text-sm
           "
         >
-            <div className="flex flex-col cursor-pointer">
-                <>
-                    <MenuItem
-                        onClick={() => {}}
-                        label="Login"
-                    />
-                    <MenuItem
-                        onClick={() => {}}
-                        label="Sign up"
-                    />
-                </>
-            </div>
+          <div className="flex flex-col cursor-pointer">
+            <>
+              <MenuItem
+                onClick={() => {
+                  return null; 
+                }}
+                label="Login"
+              />
+              <MenuItem
+                onClick={() => {
+                  return null;
+                }}
+                label="Sign up"
+              />
+            </>
+          </div>
 
         </div>
             
-        )}
+      )}
     </div>
   );
 };
